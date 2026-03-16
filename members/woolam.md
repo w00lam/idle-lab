@@ -2,7 +2,7 @@
 
 ## 0. 대표 이미지
 
-![KakaoTalk_20260309_105546529.jpg](attachment:5f376616-6f90-4490-bbd4-fc4d722797e8:KakaoTalk_20260309_105546529.jpg)
+![main image](./image/woolam.png)
 
 ## 1. 경력&경험
 
