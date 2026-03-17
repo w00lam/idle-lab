@@ -1,0 +1,32 @@
+{
+  "id": "woolam",
+  "name": "이우람",
+  "subName": "Backend Developer",
+  "profileImage": "image/woolam.png",
+  "introduction": {
+    "quote": "데이터의 흐름을 설계하는 백엔드 개발자입니다."
+  },
+  "info": {
+    "description": "Java와 Spring Boot를 기반으로 탄탄한 시스템을 지향합니다."
+  },
+  "strengths": [
+    "문제 해결",
+    "끈기력",
+    "효율적 소통",
+    "도전 정신"
+  ],
+  "skills": [
+    {
+      "name": "Java",
+      "progress": 70
+    },
+    {
+      "name": "SQL",
+      "progress": 20
+    },
+    {
+      "name": "HTML/CSS",
+      "progress": 10
+    }
+  ]
+}
