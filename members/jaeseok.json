@@ -1,0 +1,20 @@
+{
+  "id": "JaeSeok",
+  "name": "이재석",
+  "subName": "Backend Developer",
+  "profileImage": "",
+  "introduction": {
+    "quote": "백엔드 개발자입니다."
+  },
+  "info": {
+    "description": "Java와 Spring Boot을 공부하고 있는 백엔드 개발자입니다."
+  },
+  "strengths": [
+  ],
+  "skills": [
+    {
+      "name": "Git & GitHub",
+      "progress": 5
+    }
+  ]
+}

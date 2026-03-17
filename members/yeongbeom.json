@@ -1,0 +1,18 @@
+{
+  "id": "yyb0702",
+  "name": "윤영범",
+  "subName": "Backend Developer",
+  "profileImage": "image/yeongbeom.png",
+  "introduction": {
+    "quote": "예비 백엔드 개발자 입니다.꾸준히 기초를 쌓아서, 나중에는 직접 서비스를 만들 수 있는 개발자가 되는 것이 목표입니다."
+  },
+  "info": {
+    "description": "Java와 Spring Boot를 기반으로 탄탄한 시스템을 지향합니다."
+  },
+  "strengths": ["학습 능력", "책임감", "꾸준함"],
+  "skills": [
+    { "name": "Java", "progress": 30 },
+    { "name": "SQL", "progress": 30 },
+    { "name": "HTML/CSS", "progress": 20 }
+  ]
+}
