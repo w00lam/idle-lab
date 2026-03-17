@@ -5,7 +5,7 @@
 ![team-page.png](image/team-page.png)
 
 ## [6조] 아이(I)들
-[자기소개 페이지](http://localhost:63342/idle-lab/index.html?_ijt=reh7ho409aphlvdt943pf9tb0u&_ij_reload=RELOAD_ON_SAVE)
+[자기소개 페이지](https://w00lam.github.io/idle-lab/)
 
 | 이름  | 역할 | 구현                       |
 |:----|:---|:-------------------------|
