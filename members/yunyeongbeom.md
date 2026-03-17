@@ -2,7 +2,7 @@
 
 ## 0. 대표 이미지
 
-![main image](./image/yeongbeom.png)
+![yeongbeom.png](../image/yeongbeom.png)
 
 ## 1. 경력&경험
 
