@@ -1,214 +1,149 @@
 # 팀원 소개 페이지
 
-Git 커밋 협업을 통한 팀원 소개 페이지 프로젝트입니다.
+팀원들의 자기소개를 정리하는 페이지입니다.
+각 팀원이 멤버파일 작성하고 PR을 통해 추가합니다.
 
-![main image](./image/main.png)
+## TODO list
+- 필수 기능
+- [ ] 우리 팀 저장소 복제 (Clone) & 계획 짜기
+- [ ] 나만의 작업 공간 만들기 (Branch)
+- [ ] Markdown으로 자기소개 작성하기
+- [ ] "제 작업 다 끝났어요!" (Pull Request, PR)
+- [ ] 팀원의 작업 검토하고 합치기 (Code Review & Merge)
 
-## 프로젝트 구조
-
-```
-sparta-git-cowork/
-├── index.html          # 팀원 목록 페이지
-├── members/           # 팀원 정보 JSON 파일 디렉토리
-│   ├── members.json   # 팀원 목록 파일
-│   ├── member1.json  # 템플릿 1 (프론트엔드 개발자)
-│   ├── member2.json  # 템플릿 2 (백엔드 개발자)
-│   ├── member3.json  # 템플릿 3 (UI/UX 디자이너)
-│   ├── member4.json  # 템플릿 4 (풀스택 개발자)
-│   ├── member5.json  # 템플릿 5 (데이터 분석가)
-│   └── example.json   # 예시 팀원 정보
-└── image/             # 이미지 파일 디렉토리
-```
-
-## 시작하기
-
-### 1. 저장소 클론 및 브랜치 생성
-
-```bash
-# 저장소 클론
-git clone <repository-url>
-cd sparta-git-cowork
-
-# 새 브랜치 생성 (본인의 이름 또는 아이디로)
-git checkout -b add-member-<your-name>
-```
-
-### 2. 본인의 팀원 정보 추가
-
-**방법 1: 기존 템플릿 활용 (추천)**
-
-1. `members/` 디렉토리에서 본인과 가장 유사한 역할의 템플릿을 선택합니다:
-   - `member1.json` - 프론트엔드 개발자
-   - `member2.json` - 백엔드 개발자
-   - `member3.json` - UI/UX 디자이너
-   - `member4.json` - 풀스택 개발자
-   - `member5.json` - 데이터 분석가
-
-2. 선택한 템플릿 파일을 복사하여 본인의 JSON 파일을 생성합니다:
-   ```bash
-   cp members/member1.json members/본인아이디.json
-   ```
-
-3. 생성한 JSON 파일을 열어 본인의 정보로 수정합니다.
-
-**방법 2: 처음부터 작성**
-
-1. `members/` 디렉토리에 본인의 JSON 파일을 생성합니다.
-   - 파일명: `본인아이디.json` (예: `honggildong.json`)
-
-2. 아래 템플릿을 참고하여 본인의 정보를 작성합니다.
-
-```json
-{
-  "id": "your-id",
-  "name": "홍길동",
-  "subName": "풀스택 개발자",
-  "profileImage": "image/your-profile.png",
-  "introduction": {
-    "quote": "자기소개 한 줄",
-    "detail": "자기소개 상세 내용"
-  },
-  "info": {
-    "description": "간단한 소개",
-    "birthday": "2000.01.01",
-    "location": "서울시 강남구",
-    "email": "your.email@example.com",
-    "phone": "010-1234-5678"
-  },
-  "strengths": ["의사소통", "도전 정신", "리더십"],
-  "skills": [
-    { "name": "HTML", "progress": 10 },
-    { "name": "CSS", "progress": 10 },
-    { "name": "JavaScript", "progress": 15 }
-  ],
-  "licenses": ["정보처리기사"],
-  "education": [
-    {
-      "name": "스파르타 대학교",
-      "period": "2016.03.02 ~ 2020.02.20",
-      "gpa": "4.0",
-      "location": "서울시 강남구"
-    }
-  ],
-  "experience": [
-    {
-      "period": "6개월",
-      "company": "회사명",
-      "term": "2023.01~2023.06",
-      "team": "개발팀, 개발자",
-      "task": "주요 업무",
-      "project": {
-        "name": "프로젝트명",
-        "term": "2023.02~2023.05",
-        "detail": "프로젝트 상세 설명"
-      }
-    }
-  ],
-  "projects": [
-    {
-      "title": "프로젝트명",
-      "description": "프로젝트 설명",
-      "image": "image/project-image.png",
-      "link": "project.html"
-    }
-  ]
-}
-```
-
-3. `members/members.json` 파일에 본인의 JSON 파일명을 추가합니다.
-
-```json
-{
-  "members": [
-    "member1.json",
-    "member2.json",
-    "member3.json",
-    "member4.json",
-    "member5.json",
-    "your-id.json"
-  ]
-}
-```
-
-   **중요**: 배열의 순서는 자유롭게 배치할 수 있습니다. 기존 템플릿들은 유지하고, 본인 파일만 추가하세요.
-
-4. 프로필 이미지를 `image/` 디렉토리에 추가합니다 (선택사항).
-   - 파일명: `본인아이디.png` 또는 `본인아이디.jpg`
-   - JSON 파일에서 `profileImage` 필드를 수정: `"image/본인아이디.png"`
-
-### 3. 변경사항 커밋 및 푸시
-
-```bash
-# 변경사항 확인
-git status
-
-# 변경사항 스테이징
-git add members/your-id.json
-git add members/members.json
-git add image/your-profile.png  # 이미지가 있는 경우
-
-# 커밋
-git commit -m "Add: 홍길동 팀원 정보 추가"
-
-# 푸시
-git push origin add-member-<your-name>
-```
-
-### 4. Pull Request 생성
-
-1. GitHub에서 Pull Request를 생성합니다.
-2. PR 제목: `Add: [본인 이름] 팀원 정보 추가`
-3. PR 설명에 본인의 간단한 소개를 작성합니다.
-
-### 5. 코드 리뷰 및 머지
-
-- 다른 팀원들의 코드 리뷰를 받습니다.
-- 승인 후 메인 브랜치에 머지됩니다.
-
-## 주의사항
-
-1. **파일명 규칙**: JSON 파일명은 `본인아이디.json` 형식으로 작성하세요.
-2. **JSON 형식**: JSON 파일의 문법 오류가 없도록 주의하세요.
-3. **이미지 경로**: 이미지 파일은 `image/` 디렉토리에 저장하고, 경로는 `image/파일명.png` 형식으로 작성하세요.
-4. **커밋 메시지**: 명확하고 간결한 커밋 메시지를 작성하세요.
-5. **충돌 해결**: 다른 팀원과 동시에 수정한 경우 충돌을 해결해야 합니다.
-
-## 예시
-
-### 팀원 정보 추가 예시
-
-```bash
-# 1. 브랜치 생성
-git checkout -b add-member-kim
-
-# 2. 템플릿 복사 (프론트엔드 개발자인 경우)
-cp members/member1.json members/kim.json
-
-# 3. JSON 파일 수정
-# members/kim.json 파일을 열어 본인 정보로 수정
-
-# 4. members.json 업데이트
-# members/members.json에 "kim.json" 추가
-
-# 5. 커밋 및 푸시
-git add members/kim.json members/members.json
-git commit -m "Add: 김철수 팀원 정보 추가"
-git push origin add-member-kim
-```
-
-### 템플릿별 역할 안내
-
-- **member1.json** (김개발): 프론트엔드 개발자 - React, TypeScript 중심
-- **member2.json** (이백엔드): 백엔드 개발자 - Node.js, Python 중심
-- **member3.json** (박디자인): UI/UX 디자이너 - Figma, Adobe XD 중심
-- **member4.json** (최풀스택): 풀스택 개발자 - React, Node.js 모두
-- **member5.json** (정데이터): 데이터 분석가 - Python, SQL, 머신러닝 중심
-
-본인의 역할과 가장 유사한 템플릿을 선택하여 수정하시면 됩니다!
-
-## 문의
-
-프로젝트 관련 문의사항이 있으면 이슈를 생성해주세요.
+- 도전 기능
+- [ ] Markdown 소개를 HTML/CSS/JS 페이지로 확장하기
+- [ ] PR 설명 더 자세히 작성하기
 
 ---
-Copyright ⓒ TeamSparta All rights reserved.
+
+## 목표
+
+이 레포지토리는 팀원 소개 페이지를 관리**하기 위한 공간입니다.
+- 각 팀원은 자신의 소개 파일을 마크다운 파일로 작성합니다.
+- 작성된 파일은 `/members` 폴더에 저장됩니다.
+- PR을 통해 팀원과 피드백을 주고받습니다.
+
+---
+
+## 구조
+
+- [ ] 브랜치 구조 시각화
+
+---
+
+## 작성 방법
+
+1. 팀장이 만든 레포지토리를 clone합니다.
+2. `/members/' 폴더에 자신의 소개 파일을 생성합니다.
+- `members/{name}.md`
+- 예시: `members/woolam.md`
+3. 업로드 할 이미지가 있다면 `/image` 폴더에 저장합니다.
+4. 아래 템플릿을 사용하거나 직접 작성합니다.
+```markdown
+0. 대표 이미지
+
+1. 경력&경험
+   🎯 관심 도메인
+   | (예시) 핀테크, 커머스, 고가용성 아키텍처, 데이터 엔지니어링 등
+
+
+    🚀 기존 경험 (실무/프로젝트)
+    | 어떤 경험이던 좋아요! 내가 해왔던 것 중에 공유하고 싶은 것을 얘기해주세요:)
+
+    [프로젝트 명/회사 명] (202X.XX - 202X.XX)
+    주요 역할: (예: API 설계 및 DB 최적화)
+    성과: (예: 응답 속도 30% 개선, 배포 자동화 구축)
+    🛠 기술 스택
+    | 없어도 괜찮아요! 가지고 있다면 작성해주세요
+
+    Main: (예: Java, Spring Boot, MySQL)
+    Sub: (예: Python, Redis, Docker)
+    Learning: (예: Go, Kubernetes)
+2. 자기 소개
+   🧠 MBTI
+
+    💬 나만의 소통 방식
+    |
+   
+    ⏰ 에너지 가동 시간 (Work-Log)
+
+    [ ] 🌅 얼리버드 엔진 (오전 집중형: 해 뜨면 코딩 시작)
+    [ ] ☀️ 미드데이 부스터 (낮 시간 집중형: 점심 먹고 최고조)
+    [ ] 🌆 노을빛 워커 (오후~저녁 집중형: 퇴근 시간 전 무서운 속도)
+    [ ] 🌑 심야의 코딩술사 (새벽형: 모두가 잠든 뒤 뇌가 깨어남)
+    [ ] 🔍 리뷰 스타일 (Code Review)
+
+    [ ] 꼼꼼한 현미경파: 오타부터 아키텍처까지 세밀하게 리뷰
+    [ ] 핵심 짚어주기파: 큰 로직의 흐름과 성능 위주 리뷰
+    [ ] 부드러운 응원파: 칭찬과 함께 개선안을 조심스럽게 제안
+    [ ] 효율 우선파: 빠르게 머지하고 실행하며 고치는 스타일
+   
+    ⚖️ 갈등 해결 방식
+    
+    [ ] 데이터 팩트폭격기: 수치와 논문, 공식 문서 근거로 해결
+    [ ] 평화 유지군: 서로의 의견을 절충하여 제3의 안 도출
+    [ ] 직진 토론러: 감정 빼고 끝까지 토론해서 결론 도출
+    [ ] 유연한 수용자: 팀의 방향성에 맞춰 빠르게 내 의견 수정 가능
+3. 관심사
+   취미:
+   |
+
+   관심사:
+   |
+
+   TMI:
+   | 어떤 얘기라도 좋아요! 내가 가진 TMI 중에 공유하고 싶은 것을 얘기해주세요:)
+
+4. 백엔드 개발자로서 성장하는 나에게 한마디🔥
+
+```
+
+---
+
+## 브랜치 전략
+
+작업에 필요한 브랜치를 생성 후 피드백 및 개선을 완료하면 해당 브랜치를 삭제합니다.
+
+### Main Branch
+
+- `main` : 최종 결과가 반영되는 기본 브랜치
+
+### Working Branch
+
+팀원 소개 추가 또는 문서 작업은 아래 규칙으로 브랜치를 생성합니다.
+- `docs/member-card-{name}`
+- 예시: `docs/member-card-woolam`
+
+---
+
+## 워크 플로우
+
+1. `main` 브랜치에서 새로운 작업 브랜치를 생성합니다.
+
+- `git checkout main`
+- `git pull origin main`
+- `git checkout -b docs/member-card-{name}`
+
+2. `members/` 폴더에 자기소개 파일을 작성합니다.
+
+- `members/{name}.md`
+
+3. 변경 사항을 커밋합니다.
+
+- `git add .`
+- `git commit -m "docs: add member introduction ({github-id})"`
+
+4. 원격 저장소에 브랜치를 push 합니다.
+
+- `git push origin docs/member-card-{name}`
+
+5. GitHub에서 Pull Request를 생성합니다.
+
+- base: `main`
+
+- compare: `docs/member-{github-id}`
+
+6. 코드 리뷰 후 `main` 브랜치에 merge 합니다.
+
+---
