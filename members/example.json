@@ -1,6 +1,6 @@
 {
-  "id": "example",
-  "name": "김르탄",
+  "id": "Schaewon2",
+  "name": "성채원",
   "subName": "풀스택 개발자",
   "profileImage": "image/profile_image.png",
   "introduction": {
@@ -8,16 +8,19 @@
     "detail": "다이내믹한 기업 문화와 빠른 성장에 매력을 느꼈습니다. 저의 창의적이고 유연한 사고로 팀에 신선한 아이디어를 제공하고 싶습니다. 함께 도전하고 성장하는 과정에서 큰 성취를 이루고 싶습니다."
   },
   "info": {
-    "description": "JavaScript를 활용하여 React/Node.js 풀스택 개발을 하고 있습니다.",
-    "birthday": "2000.08.15",
-    "location": "서울 중랑구",
-    "email": "jiwoong.choi.dev@gmail.com",
-    "phone": "010-0000-0000"
+    "description": "Java와 Spring Boot를 활용하여 백엔드 개발자 준비 중입니다.",
+    "birthday": "2001.12.06",
+    "location": "경기도 안양시",
+    "email": "schaewon1206@gmail.com",
+    "phone": "010-4645-4025"
   },
   "strengths": [
-    "의사소통",
+    "창의력",
     "도전 정신",
-    "리더십"
+    "끈기력",
+    "포용",
+    "열정",
+    "중재자"
   ],
   "skills": [
     { "name": "HTML", "progress": 3 },
@@ -27,19 +30,20 @@
     { "name": "Node.js", "progress": 0 }
   ],
   "licenses": [
-    "SQLD 자격증",
-    "ADsP 자격증"
+    "SQLD",
+    "ADsP"
+
   ],
   "education": [
     {
-      "name": "스파르타 고등학교",
+      "name": "관양고등학교",
       "period": "2013.03.02 ~ 2016.02.14",
       "location": "서울시 중랑구"
     },
     {
       "name": "스파르타 대학교",
       "period": "2016.03.02 ~ 2020.02.20",
-      "gpa": "4.35",
+      "gpa": "4.06",
       "location": "서울시 은평구"
     }
   ],
