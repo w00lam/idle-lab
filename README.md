@@ -5,21 +5,21 @@
 
 ## TODO list
 - 필수 기능
-- [ ] 우리 팀 저장소 복제 (Clone) & 계획 짜기
-- [ ] 나만의 작업 공간 만들기 (Branch)
-- [ ] Markdown으로 자기소개 작성하기
-- [ ] "제 작업 다 끝났어요!" (Pull Request, PR)
-- [ ] 팀원의 작업 검토하고 합치기 (Code Review & Merge)
+- [x] 우리 팀 저장소 복제 (Clone) & 계획 짜기
+- [x] 나만의 작업 공간 만들기 (Branch)
+- [x] Markdown으로 자기소개 작성하기
+- [x] "제 작업 다 끝났어요!" (Pull Request, PR)
+- [x] 팀원의 작업 검토하고 합치기 (Code Review & Merge)
 
 - 도전 기능
-- [ ] Markdown 소개를 HTML/CSS/JS 페이지로 확장하기
-- [ ] PR 설명 더 자세히 작성하기
+- [x] Markdown 소개를 HTML/CSS/JS 페이지로 확장하기
+- [x] PR 설명 더 자세히 작성하기
 
 ---
 
 ## 목표
 
-이 레포지토리는 팀원 소개 페이지를 관리**하기 위한 공간입니다.
+이 레포지토리는 **팀원 소개 페이지를 관리**하기 위한 공간입니다.
 - 각 팀원은 자신의 소개 파일을 마크다운 파일로 작성합니다.
 - 작성된 파일은 `/members` 폴더에 저장됩니다.
 - PR을 통해 팀원과 피드백을 주고받습니다.
@@ -28,14 +28,28 @@
 
 ## 구조
 
-- [ ] 브랜치 구조 시각화
+```bash
+idle-lab/
+├── index.html          # 팀원 목록 페이지
+├── script.js           # JavaScript 파일
+├── style.css           # CSS 파일
+├── members/            # 팀원 정보 JSON 파일 디렉토리
+│   ├── members.json    # 팀원 목록 파일
+│   ├── member1.json    # 팀원 목록 파일
+│   ├── member2.json    # 팀원 목록 파일
+│   ├── member3.json    # 팀원 목록 파일
+│   ├── member4.json    # 팀원 목록 파일
+│   ├── member5.json    # 팀원 목록 파일
+│   └── example.json    # 예시 팀원 정보
+└── image/              # 이미지 파일 디렉토리
+```
 
 ---
 
 ## 작성 방법
 
 1. 팀장이 만든 레포지토리를 clone합니다.
-2. `/members/' 폴더에 자신의 소개 파일을 생성합니다.
+2. `/members/` 폴더에 자신의 소개 파일을 생성합니다.
 - `members/{name}.md`
 - 예시: `members/woolam.md`
 3. 업로드 할 이미지가 있다면 `/image` 폴더에 저장합니다.
@@ -147,3 +161,5 @@
 6. 코드 리뷰 후 `main` 브랜치에 merge 합니다.
 
 ---
+
+## 
