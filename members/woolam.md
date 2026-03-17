@@ -2,7 +2,7 @@
 
 ## 0. 대표 이미지
 
-![main image](./image/woolam.png)
+![woolam.png](../image/woolam.png)
 
 ## 1. 경력&경험
 
