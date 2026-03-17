@@ -1,0 +1,19 @@
+{
+  "id": "Schaewon2",
+  "name": "성채원",
+  "subName": "Backend Developer",
+  "profileImage": "image/profile_image.png",
+  "introduction": {
+    "quote": "소프트웨어학을 전공한 백엔드 개발자 지망생입니다."
+  },
+  "info": {
+    "description": "Java와 Spring Boot를 기반으로 체계적인 시스템 구축을 지향합니다."
+  },
+  "strengths": ["창의력", "끈기력", "열정", "직관성"],
+  "skills": [
+    { "name": "Java", "progress": 70 },
+    { "name": "SQL", "progress": 90 },
+    { "name": "Spring Boot", "progress": 20 },
+    {"name":  "Python", "progress": 30}
+  ]
+}
